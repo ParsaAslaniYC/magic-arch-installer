@@ -248,7 +248,7 @@ echo "Enter the drive name to install bootloader in it. (eg: /dev/sda or /dev/nv
 echo "NOTE: JUST GIVE DRIVE NAME (/dev/sda); NOT THE PARTITION NAME (/dev/sda1)"
 echo "Enter the drive name: "
 read grubdrive
-grub-install --target=i386-pc "$grubdrive"
+grub-install --target=i386-pc "$grubdrive" -o
 grub-mkconfig -o /boot/grub/grub.cfg
 sleep 2s
 clear
